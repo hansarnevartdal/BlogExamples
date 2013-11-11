@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airline.IdentityServer", "Airline.STS\Airline.IdentityServer.csproj", "{337DE4D6-1980-40AF-91F0-82B6CEF6B314}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airline.Services.Reward", "Airline.Services.Reward\Airline.Services.Reward.csproj", "{C4E27136-7EE6-408D-A535-B84E0D94B79A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{337DE4D6-1980-40AF-91F0-82B6CEF6B314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{337DE4D6-1980-40AF-91F0-82B6CEF6B314}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{337DE4D6-1980-40AF-91F0-82B6CEF6B314}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{337DE4D6-1980-40AF-91F0-82B6CEF6B314}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4E27136-7EE6-408D-A535-B84E0D94B79A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E27136-7EE6-408D-A535-B84E0D94B79A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E27136-7EE6-408D-A535-B84E0D94B79A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E27136-7EE6-408D-A535-B84E0D94B79A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

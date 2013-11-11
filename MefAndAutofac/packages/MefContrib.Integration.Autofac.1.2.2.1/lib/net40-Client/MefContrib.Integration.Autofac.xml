@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MefContrib.Integration.Autofac</name>
+    </assembly>
+    <members>
+        <member name="T:MefContrib.Integration.Autofac.CompositionIntegration">
+            <summary>
+              Represents an Autofac extension that adds integration with
+              Managed Extensibility Framework.
+            </summary>
+        </member>
+        <member name="F:MefContrib.Integration.Autofac.CompositionIntegration.AutofacCompositionContainerName">
+            <summary>
+            The name of the <see cref="P:MefContrib.Integration.Autofac.CompositionIntegration.CompositionContainer"/> used for composition integration.
+            </summary>
+        </member>
+        <member name="M:MefContrib.Integration.Autofac.CompositionIntegration.#ctor(Autofac.ILifetimeScope,System.Collections.Generic.IEnumerable{System.ComponentModel.Composition.Primitives.ComposablePartCatalog})">
+            <summary>
+              Initializes a new instance of <see cref="T:MefContrib.Integration.Autofac.CompositionIntegration"/> class.
+            </summary>
+        </member>
+        <member name="M:MefContrib.Integration.Autofac.CompositionIntegration.Start">
+            <summary>
+              Perform once-off startup processing.
+            </summary>
+        </member>
+        <member name="M:MefContrib.Integration.Autofac.CompositionIntegration.Dispose(System.Boolean)">
+            <summary>
+              Releases unmanaged and - optionally - managed resources
+            </summary>
+            <param name = "disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
+        </member>
+        <member name="P:MefContrib.Integration.Autofac.CompositionIntegration.Register">
+            <summary>
+              Returns true if underlying <see cref="P:MefContrib.Integration.Autofac.CompositionIntegration.CompositionContainer"/> should be registered
+              in the <see cref="T:Autofac.ILifetimeScope"/> container.
+            </summary>
+        </member>
+        <member name="P:MefContrib.Integration.Autofac.CompositionIntegration.Catalogs">
+            <summary>
+              Gets a collection of catalogs MEF is able to access.
+            </summary>
+        </member>
+        <member name="P:MefContrib.Integration.Autofac.CompositionIntegration.Providers">
+            <summary>
+              Gets a read-only collection of <see cref="T:System.ComponentModel.Composition.Hosting.ExportProvider"/>s registered in this extension.
+            </summary>
+        </member>
+        <member name="P:MefContrib.Integration.Autofac.CompositionIntegration.CompositionContainer">
+            <summary>
+              Gets <see cref="P:MefContrib.Integration.Autofac.CompositionIntegration.CompositionContainer"/> used by the extension.
+            </summary>
+        </member>
+        <member name="P:MefContrib.Integration.Autofac.CompositionIntegration.Started">
+            <summary>
+              Gets a value indicating whether this <see cref="T:MefContrib.Integration.Autofac.CompositionIntegration"/> is started.
+            </summary>
+            <value>
+              <see langword="true"/> if started; otherwise, <see langword="false"/>.
+            </value>
+        </member>
+        <member name="T:MefContrib.Integration.Autofac.MefRegistrationSource">
+            <summary>
+              An <see cref="T:Autofac.Core.IRegistrationSource"/> implementation that retrieves exports from MEF and provides them to Autofac as services.
+            </summary>
+        </member>
+        <member name="M:MefContrib.Integration.Autofac.MefRegistrationSource.#ctor(System.ComponentModel.Composition.Hosting.CompositionContainer)">
+            <summary>
+              Initializes a new instance of the <see cref="T:MefContrib.Integration.Autofac.MefRegistrationSource"/> class.
+            </summary>
+            <param name="container">The container.</param>
+        </member>
+        <member name="M:MefContrib.Integration.Autofac.MefRegistrationSource.Autofac#Core#IRegistrationSource#RegistrationsFor(Autofac.Core.Service,System.Func{Autofac.Core.Service,System.Collections.Generic.IEnumerable{Autofac.Core.IComponentRegistration}})">
+            <summary>
+              Retrieve registrations for an unregistered service, to be used
+              by the container.
+            </summary>
+            <param name = "service">The service that was requested.</param>
+            <param name = "registrationAccessor">A function that will return existing registrations for a service.</param>
+            <returns>Registrations providing the service.</returns>
+            <remarks>
+              If the source is queried for service s, and it returns a component that implements both s and s', then it
+              will not be queried again for either s or s'. This means that if the source can return other implementations
+              of s', it should return these, plus the transitive closure of other components implementing their
+              additional services, along with the implementation of s. It is not an error to return components
+              that do not implement <paramref name = "service" />.
+            </remarks>
+        </member>
+        <member name="P:MefContrib.Integration.Autofac.MefRegistrationSource.Autofac#Core#IRegistrationSource#IsAdapterForIndividualComponents">
+            <summary>
+              Gets whether the registrations provided by this source are 1:1 adapters on top
+              of other components (I.e. like Meta, Func or Owned.)
+            </summary>
+            <value></value>
+        </member>
+        <member name="T:MefContrib.Integration.Autofac.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:MefContrib.Integration.Autofac.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:MefContrib.Integration.Autofac.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:MefContrib.Integration.Autofac.Properties.Resources.ExtensionMissing">
+            <summary>
+              Looks up a localized string similar to {0} extension missing..
+            </summary>
+        </member>
+        <member name="T:MefContrib.Integration.Autofac.AutofacContainerAdapter">
+            <summary>
+              Represents an adapter for the <see cref="T:Autofac.ILifetimeScope"/> container.
+            </summary>
+        </member>
+        <member name="M:MefContrib.Integration.Autofac.AutofacContainerAdapter.#ctor(Autofac.ILifetimeScope)">
+            <summary>
+              Initializes a new instance of the <see cref="T:MefContrib.Integration.Autofac.AutofacContainerAdapter"/> class.
+            </summary>
+            <param name="container"><see cref="T:Autofac.ILifetimeScope"/> instance.</param>
+        </member>
+        <member name="M:MefContrib.Integration.Autofac.AutofacContainerAdapter.Initialize">
+            <summary>
+              Method called by <see cref="T:MefContrib.Containers.ContainerExportProvider"/> in order
+              to initialize the adapter.
+            </summary>
+        </member>
+        <member name="M:MefContrib.Integration.Autofac.AutofacContainerAdapter.Resolve(System.Type,System.String)">
+            <summary>
+              Method called by <see cref="T:MefContrib.Containers.ContainerExportProvider"/> to retrieve
+              an instance of a given type.
+            </summary>
+            <param name="type">Type of the instance to retrieve.</param>
+            <param name="name">Optional name.</param>
+            <returns>An instance of a given type.</returns>
+        </member>
+        <member name="T:MefContrib.Integration.Autofac.ContainerExtensions">
+            <summary>
+              Contains extensions for the <see cref="T:Autofac.ILifetimeScope"/> interface.
+            </summary>
+        </member>
+        <member name="M:MefContrib.Integration.Autofac.ContainerExtensions.EnableCompositionIntegration(Autofac.ContainerBuilder)">
+            <summary>
+              Enables Managed Extensibility Framework two-way integration.
+            </summary>
+            <param name = "builder">The builder.</param>
+        </member>
+        <member name="M:MefContrib.Integration.Autofac.ContainerExtensions.EnableCompositionIntegration(Autofac.IComponentContext)">
+            <summary>
+              Enables Managed Extensibility Framework two-way integration.
+            </summary>
+            <param name="container">Target container.</param>
+            <returns>
+              <see cref="T:MefContrib.Integration.Autofac.CompositionIntegration"/> instance.
+            </returns>
+        </member>
+        <member name="M:MefContrib.Integration.Autofac.ContainerExtensions.RegisterCatalog(Autofac.IComponentContext,System.ComponentModel.Composition.Primitives.ComposablePartCatalog)">
+            <summary>
+              Registers a MEF catalog within an Autofac container.
+            </summary>
+            <param name = "container">Autofac container instance.</param>
+            <param name = "catalog">MEF catalog to be registered.</param>
+        </member>
+        <member name="M:MefContrib.Integration.Autofac.ContainerExtensions.RegisterCatalog(Autofac.ContainerBuilder,System.ComponentModel.Composition.Primitives.ComposablePartCatalog)">
+            <summary>
+              Registers a MEF catalog within an Autofac container.
+            </summary>
+            <param name = "builder">The builder.</param>
+            <param name = "catalog">MEF catalog to be registered.</param>
+        </member>
+    </members>
+</doc>

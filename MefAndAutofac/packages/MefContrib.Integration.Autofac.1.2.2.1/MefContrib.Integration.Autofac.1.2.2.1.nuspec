@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>MefContrib.Integration.Autofac</id>
+    <version>1.2.2.1</version>
+    <title>MefContrib.Integration.Autofac</title>
+    <authors>MefContrib</authors>
+    <owners>MefContrib</owners>
+    <projectUrl>http://mefcontrib.codeplex.com/</projectUrl>
+    <iconUrl>http://download.codeplex.com/Project/Download/FileDownload.aspx?ProjectName=mvcsitemap&amp;DownloadId=208524</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Managed Extensibility Framework (MEF) and Autofac integration.</description>
+    <summary>Managed Extensibility Framework (MEF) and Autofac integration.</summary>
+    <releaseNotes />
+    <copyright />
+    <language />
+    <tags>mef ioc di dependency injection mvc composition autofac</tags>
+    <dependencies>
+      <dependency id="MefContrib" version="1.2" />
+      <dependency id="Autofac" version="2.4.5.724" />
+    </dependencies>
+    <references>
+      <reference file="MefContrib.Integration.Autofac.dll" />
+    </references>
+  </metadata>
+</package>
