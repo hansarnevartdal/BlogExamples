@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airline.IdentityServer", "Airline.STS\Airline.IdentityServer.csproj", "{337DE4D6-1980-40AF-91F0-82B6CEF6B314}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airline.IdentityServer", "Airline.IdentityServer\Airline.IdentityServer.csproj", "{337DE4D6-1980-40AF-91F0-82B6CEF6B314}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Airline.Services.Reward", "Airline.Services.Reward\Airline.Services.Reward.csproj", "{C4E27136-7EE6-408D-A535-B84E0D94B79A}"
 EndProject
